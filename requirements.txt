@@ -26,4 +26,6 @@ pypdf==6.14.2
 
 # Transitive dependencies pinned to patched versions for security.
 pillow>=12.2.0
-setuptools>=78.1.1
+# 83.0.0 patches PYSEC-2026-3447. A lower floor is satisfied by the runner's
+# preinstalled setuptools, so pip never upgrades and the vulnerable one stays.
+setuptools>=83.0.0
