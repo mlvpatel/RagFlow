@@ -1,22 +1,22 @@
-# RagFlow
+# rag-naive-2022
 
-**A retrieval augmented generation service for question answering over your own documents. The naive baseline of the RagFlow line, 2022 generation.**
+**A retrieval augmented generation service for question answering over your own documents. The naive baseline of the RAG line, 2022 generation.**
 
-**Part of the RagFlow line, a series of reference enterprise RAG implementations. This repository is RagFlow, Naive RAG.** See [the full line](#the-ragflow-line) below.
+**Part of the RAG line, a series of reference enterprise RAG implementations. This repository is rag-naive-2022, Naive RAG.** See [the full line](#the-rag-line) below.
 
-RagFlow answers questions about your documents with the original 2022 RAG pattern: embed the question, search a vector store once, put the top matches into the prompt, and generate a grounded answer. No hybrid search, no reranking, no query rewriting. It is packaged as a real service, FastAPI, a Streamlit chat interface, multi user sessions, and Docker, so it runs like production while the retrieval stays honestly naive.
+rag-naive-2022 answers questions about your documents with the original 2022 RAG pattern: embed the question, search a vector store once, put the top matches into the prompt, and generate a grounded answer. No hybrid search, no reranking, no query rewriting. It is packaged as a real service, FastAPI, a Streamlit chat interface, multi user sessions, and Docker, so it runs like production while the retrieval stays honestly naive.
 
-[![CI](https://github.com/mlvpatel/RagFlow/actions/workflows/ci.yml/badge.svg)](https://github.com/mlvpatel/RagFlow/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/python-3.11-blue) ![Chroma](https://img.shields.io/badge/vector%20store-Chroma-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+[![CI](https://github.com/mlvpatel/rag-naive-2022/actions/workflows/ci.yml/badge.svg)](https://github.com/mlvpatel/rag-naive-2022/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/python-3.11-blue) ![Chroma](https://img.shields.io/badge/vector%20store-Chroma-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
-![RagFlow answering a document question live on a local model](assets/videos/ragflow-demo.gif)
+![rag-naive-2022 answering a document question live on a local model](assets/videos/rag-naive-2022-demo.gif)
 
 The clip above is a live, unedited run on a local llama3.2 model with the bundled sample data, including a real SEC 10-K, indexed in Chroma. No paid keys were used.
 
-**Full recording and a still:** the screen recording is at [assets/videos/ragflow-demo.webm](assets/videos/ragflow-demo.webm), and a screenshot is at [assets/screenshots/ragflow-ui.png](assets/screenshots/ragflow-ui.png).
+**Full recording and a still:** the screen recording is at [assets/videos/rag-naive-2022-demo.webm](assets/videos/rag-naive-2022-demo.webm), and a screenshot is at [assets/screenshots/rag-naive-2022-ui.png](assets/screenshots/rag-naive-2022-ui.png).
 
 ## Why the naive baseline matters
 
-RagFlow is the starting point of the line. It shows the core RAG idea in its simplest honest form, so every later implementation has a clear before to compare against. When a harder question gets a shallow answer, that is the naive baseline showing its limits, the very limits that hybrid search and reranking address in RagFlowPlus 2023 and the implementations beyond it.
+rag-naive-2022 is the starting point of the line. It shows the core RAG idea in its simplest honest form, so every later implementation has a clear before to compare against. When a harder question gets a shallow answer, that is the naive baseline showing its limits, the very limits that hybrid search and reranking address in rag-advanced-2023 and the implementations beyond it.
 
 ## Features
 
@@ -160,19 +160,20 @@ tests/            unit and integration tests
 docker/           Dockerfile and Compose stack
 ```
 
-## The RagFlow line
+## The RAG line
 
-RagFlow is the first implementation in the RagFlow line, a series demonstrating distinct enterprise RAG retrieval strategies.
+This repo is the Naive (2022) rung. Each rung adds one idea and keeps the ones below it.
 
-| Year | Repository | Generation |
+| Year | Repository | Strategy |
 |---|---|---|
-| 2022 | RagFlow, this repo | Naive RAG, single dense retrieval |
-| 2023 | [RagFlowPlus](https://github.com/mlvpatel/RagFlowPlus) | Advanced RAG, hybrid retrieval and reranking |
-| 2024 | [RagFlowPro](https://github.com/mlvpatel/RagFlowPro) | Modular production RAG, pgvector, streaming, evaluation |
-| 2025 | [RagFlowProPlus](https://github.com/mlvpatel/RagFlowProPlus), RagFlowKAG | Agentic RAG, knowledge graph with reasoning |
-| 2026 | [RagFlowProMax](https://github.com/mlvpatel/RagFlowProMax), UltimateRAG | Multi agent enterprise, multimodal |
-
-Every implementation is measured on the same golden questions, keyless, in the [rag-catalog](https://github.com/mlvpatel/rag-catalog) hub.
+| 2022 | rag-naive-2022, this repo | Naive: one dense search over Chroma |
+| 2023 | [rag-advanced-2023](https://github.com/mlvpatel/rag-advanced-2023) | Advanced: hybrid, RRF and cross encoder, in Python |
+| 2023 | [rag-modular-2023](https://github.com/mlvpatel/rag-modular-2023) | Modular: pgvector, RRF in SQL, streaming, memory, evaluation |
+| 2024 | [rag-graph-2024](https://github.com/mlvpatel/rag-graph-2024) | Graph: entity and triple knowledge graph linked into answers |
+| 2024 | [rag-cache-2024](https://github.com/mlvpatel/rag-cache-2024) | Cache: no retrieval, corpus in context with a semantic cache |
+| 2025 | [rag-agentic-2025](https://github.com/mlvpatel/rag-agentic-2025) | Agentic: bounded self correcting loop, confidence gated |
+| 2026 | [rag-multiagent-2026](https://github.com/mlvpatel/rag-multiagent-2026) | Multi agent: supervisor, specialists, verifier |
+| 2026 | [rag-multimodal-2026](https://github.com/mlvpatel/rag-multimodal-2026) | Multimodal: text and images in one vector space |
 
 ## Author
 

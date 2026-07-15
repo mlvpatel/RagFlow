@@ -1,4 +1,4 @@
-"""Chroma vector store and embeddings for RagFlow (naive RAG, 2022).
+"""Chroma vector store and embeddings for rag-naive-2022 (naive RAG, 2022).
 
 One embedding model, one Chroma collection, one similarity search. There is no
 hybrid search and no reranking, which is exactly what makes this the naive

@@ -1,4 +1,4 @@
-"""FastAPI service for RagFlow, the naive RAG baseline (2022).
+"""FastAPI service for rag-naive-2022, the naive RAG baseline (2022).
 
 Endpoints are intentionally simple: ask a question, manage documents, check
 health. The retrieval behind /v1/chat is a single dense search, no reranking.
@@ -25,7 +25,7 @@ from src.core.logging import get_logger
 from src.core.rag_chain import answer_question
 from src.embeddings.vectorstore import delete_document, index_document
 
-log = get_logger("ragflow.api")
+log = get_logger("rag_naive.api")
 
 _CHUNK = 1024 * 1024
 
@@ -33,12 +33,12 @@ _CHUNK = 1024 * 1024
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     memory.init_db()
-    log.info("RagFlow started, database ready")
+    log.info("rag-naive-2022 started, database ready")
     yield
 
 
 app = FastAPI(
-    title="RagFlow",
+    title="rag-naive-2022",
     description="Naive RAG baseline, 2022 generation",
     version="1.0.0",
     lifespan=lifespan,

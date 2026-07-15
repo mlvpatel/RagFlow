@@ -1,4 +1,4 @@
-"""The naive RAG chain for RagFlow (2022 generation).
+"""The naive RAG chain for rag-naive-2022 (2022 generation).
 
 Retrieve the top k chunks by dense similarity, stuff them into the prompt, and
 generate. No query rewriting, no reranking, no fusion. This is the textbook

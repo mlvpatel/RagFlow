@@ -1,4 +1,4 @@
-"""RagFlow chat UI.
+"""rag-naive-2022 chat UI.
 
 A deliberately simple 2022 era interface: a single column chat, a sidebar to
 upload and list documents. Later rungs of the line carry richer interfaces.
@@ -11,14 +11,14 @@ import uuid
 import api_utils
 import streamlit as st
 
-st.set_page_config(page_title="RagFlow", layout="centered")
+st.set_page_config(page_title="rag-naive-2022", layout="centered")
 
 if "session_id" not in st.session_state:
     st.session_state.session_id = uuid.uuid4().hex
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-st.title("RagFlow")
+st.title("rag-naive-2022")
 st.caption("Naive retrieval augmented generation, 2022 baseline")
 
 with st.sidebar:

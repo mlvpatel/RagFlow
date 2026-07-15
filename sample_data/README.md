@@ -1,6 +1,6 @@
 # Sample data
 
-Three sample documents so anyone can run RagFlow and judge it without supplying
+Three sample documents so anyone can run rag-naive-2022 and judge it without supplying
 their own files. Two are small hand written business documents, one is a real
 public SEC filing, so you can see it work on both clean text and a dense real
 world document.
@@ -47,6 +47,6 @@ Honesty check (not in any document):
 
 ## Note on the naive baseline
 
-RagFlow is the 2022 baseline of the line: a single dense retrieval pass with no
+rag-naive-2022 is the 2022 baseline of the line: a single dense retrieval pass with no
 reranking. If an answer looks shallow on a harder question, that is expected.
 The later rungs add hybrid search and reranking to address exactly that.

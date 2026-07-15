@@ -1,4 +1,4 @@
-"""Load the bundled sample documents into RagFlow.
+"""Load the bundled sample documents into rag-naive-2022.
 
 For a fully local, keyless run with Ollama:
 

@@ -1,4 +1,4 @@
-# RagFlow, naive RAG baseline (2022 generation).
+# rag-naive-2022, naive RAG baseline (2022 generation).
 # The architecture is the 2022 naive pattern; the library versions are current
 # and security patched, verified with pip-audit.
 

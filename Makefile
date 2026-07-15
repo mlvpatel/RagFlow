@@ -1,4 +1,4 @@
-# RagFlow developer commands (naive RAG baseline, 2022).
+# rag-naive-2022 developer commands (naive RAG baseline, 2022).
 
 .PHONY: help install dev frontend load-samples test lint format audit
 

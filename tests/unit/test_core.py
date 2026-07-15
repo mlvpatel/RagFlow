@@ -17,7 +17,7 @@ def test_settings_defaults():
     s = Settings()
     assert s.top_k == 4
     assert s.embedding_provider in ("openai", "ollama")
-    assert s.collection_name == "ragflow_documents"
+    assert s.collection_name == "rag_naive_documents"
 
 
 def test_load_and_split_tags_file_id():

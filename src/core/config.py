@@ -1,4 +1,4 @@
-"""Configuration for RagFlow, the naive RAG baseline (2022 generation).
+"""Configuration for rag-naive-2022, the naive RAG baseline (2022 generation).
 
 Settings load from environment variables, with a .env file supported for local
 development. Naive RAG has few knobs on purpose, so this stays short.
@@ -28,7 +28,7 @@ class Settings(BaseSettings):
 
     # Vector store.
     chroma_dir: str = "./chroma_db"
-    collection_name: str = "ragflow_documents"
+    collection_name: str = "rag_naive_documents"
 
     # Retrieval. Naive RAG performs a single dense similarity search with no
     # reranking and no hybrid search.

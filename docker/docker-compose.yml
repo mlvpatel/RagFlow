@@ -12,7 +12,7 @@ services:
     environment:
       - CHROMA_DIR=/app/chroma_db
     volumes:
-      - ragflow-data:/app/chroma_db
+      - rag-naive-data:/app/chroma_db
 
   frontend:
     build:
@@ -24,9 +24,9 @@ services:
     env_file:
       - ../.env
     environment:
-      - RAGFLOW_API_URL=http://api:8000
+      - RAG_API_URL=http://api:8000
     depends_on:
       - api
 
 volumes:
-  ragflow-data:
+  rag-naive-data:

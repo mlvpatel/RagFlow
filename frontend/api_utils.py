@@ -1,4 +1,4 @@
-"""Thin HTTP client the Streamlit UI uses to talk to the RagFlow API."""
+"""Thin HTTP client the Streamlit UI uses to talk to the rag-naive-2022 API."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ from typing import Dict, List, Optional
 
 import requests
 
-API_URL = os.environ.get("RAGFLOW_API_URL", "http://localhost:8000")
+API_URL = os.environ.get("RAG_API_URL", "http://localhost:8000")
 
 
 def ask(question: str, session_id: Optional[str]) -> Dict:

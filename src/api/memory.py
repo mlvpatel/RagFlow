@@ -1,4 +1,4 @@
-"""SQLite conversation memory and document registry for RagFlow.
+"""SQLite conversation memory and document registry for rag-naive-2022.
 
 Multi user by design: every turn is stored under a session id. Naive RAG stores
 history but does not use it to reshape the query. Reformulating a question from
@@ -12,7 +12,7 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from typing import Dict, List
 
-_DB_PATH = "ragflow.sqlite3"
+_DB_PATH = "rag_naive.sqlite3"
 
 
 @contextmanager

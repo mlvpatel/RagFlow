@@ -1,4 +1,4 @@
-"""Rate limiting and input sanitization for RagFlow.
+"""Rate limiting and input sanitization for rag-naive-2022.
 
 There is no authentication here on purpose. This baseline is a local reference
 service: docker-compose binds it to the loopback interface, so it is reachable
