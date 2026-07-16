@@ -62,7 +62,14 @@ def log_turn(session_id: str, question: str, answer: str) -> None:
         )
 
 
-def get_history(session_id: str, limit: int = 10) -> List[Dict]:
+def get_history(session_id: str, limit: int = 20) -> List[Dict]:
+    """Return the LAST `limit` turns, oldest first.
+
+    Windowed on purpose: unbounded history grows a prompt with every turn.
+    Naive RAG does not use history to reshape the query (that is a 2023
+    technique), so nothing calls this in the answer path yet; the session log
+    exists for exactly that upgrade.
+    """
     with _conn() as c:
         rows = c.execute(
             "SELECT question, answer FROM chat_logs WHERE session_id=? "
