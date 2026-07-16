@@ -6,9 +6,7 @@ Part of the RAG line, a series of reference enterprise RAG implementations, one 
 
 [![CI](https://github.com/mlvpatel/rag-naive-2022/actions/workflows/ci.yml/badge.svg)](https://github.com/mlvpatel/rag-naive-2022/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/python-3.11-blue) ![Chroma](https://img.shields.io/badge/vector%20store-Chroma-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
-![rag-naive-2022 answering a document question live on a local model](assets/videos/rag-naive-2022-demo.gif)
-
-The clip above is a live, unedited run on a local llama3.2 model with the bundled sample data, including a real SEC 10-K, indexed in Chroma. No paid keys were used. Full recording at [assets/videos/rag-naive-2022-demo.webm](assets/videos/rag-naive-2022-demo.webm), screenshot at [assets/screenshots/rag-naive-2022-ui.png](assets/screenshots/rag-naive-2022-ui.png).
+![RagChatBot banner](assets/banner.svg)
 
 ## Contents
 
